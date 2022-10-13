@@ -19,14 +19,16 @@ namespace Inventory
         public MathFunction Function => function;
         public float Value => value;
 
-        public float ExecuteEffect(float effectValue)
+        public float ExecuteEffect(float effectValue, bool inverse = false)
         {
-            return function.ApplyFunction(effectValue, value);
+            return inverse ? 
+                function.ApplyInverseFunction(effectValue, value) : 
+                function.ApplyFunction(effectValue, Value);
         }
         
         public override string ToString()
         {
-            return $"{attribute} {function.ToString()} + {value}";
+            return $"{attribute} {Function.ToString()} + {Value}";
         }
     }
 }

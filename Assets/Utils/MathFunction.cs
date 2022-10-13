@@ -5,14 +5,12 @@ namespace Utils
 {
     public enum MathFunction
     {
-        SUM,
-        SUBTRACT,
-        MULTIPLY,
-        DIVIDE,
-        EXPONENTIAL,
-        LOGARITHM
-        
-        
+        Sum,
+        Subtract,
+        Multiply,
+        Divide,
+        Exponential,
+        Logarithm
     }
 
     public static class MathFunctionExtension
@@ -21,12 +19,26 @@ namespace Utils
         {
             return function switch
             {
-                MathFunction.SUM => a + b,
-                MathFunction.SUBTRACT => a - b,
-                MathFunction.MULTIPLY => a * b,
-                MathFunction.DIVIDE => a / b,
-                MathFunction.EXPONENTIAL => Mathf.Pow(a, b),
-                MathFunction.LOGARITHM => Mathf.Log(a, b),
+                MathFunction.Sum => a + b,
+                MathFunction.Subtract => a - b,
+                MathFunction.Multiply => a * b,
+                MathFunction.Divide => a / b,
+                MathFunction.Exponential => Mathf.Pow(a, b),
+                MathFunction.Logarithm => Mathf.Log(a, b),
+                _ => 0.0f
+            };
+        }
+        
+        public static float ApplyInverseFunction(this MathFunction function, float a, float b)
+        {
+            return function switch
+            {
+                MathFunction.Sum => a - b,
+                MathFunction.Subtract => a + b,
+                MathFunction.Multiply => a / b,
+                MathFunction.Divide => a * b,
+                MathFunction.Exponential => Mathf.Pow(a, 1.0f/b),
+                MathFunction.Logarithm => Mathf.Pow(a, b),
                 _ => 0.0f
             };
         }
@@ -35,12 +47,12 @@ namespace Utils
         {
             return function switch
             {
-                MathFunction.SUM => "+",
-                MathFunction.SUBTRACT => "-",
-                MathFunction.MULTIPLY => "*",
-                MathFunction.DIVIDE => "/",
-                MathFunction.EXPONENTIAL => "exp",
-                MathFunction.LOGARITHM => "log",
+                MathFunction.Sum => "+",
+                MathFunction.Subtract => "-",
+                MathFunction.Multiply => "*",
+                MathFunction.Divide => "/",
+                MathFunction.Exponential => "exp",
+                MathFunction.Logarithm => "log",
                 _ => ""
             };
         }
