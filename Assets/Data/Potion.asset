@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 68bc34b7dcbc406b8161fbdc5f777d53, type: 3}
+  m_Name: Potion
+  m_EditorClassIdentifier: 
+  scriptableObjectName: Potion
+  image: {fileID: 0}
+  description: Heals the user by 100 Health points.
+  sellPrice: 20
+  type: {fileID: 11400000, guid: 2b6fbf44d55f34fe1b1270da5e150eaa, type: 2}
+  effects:
+  - attribute: {fileID: 11400000, guid: 4654f26e6d09e45528d5f21fe8833800, type: 2}
+    function: 0
+    value: 100
