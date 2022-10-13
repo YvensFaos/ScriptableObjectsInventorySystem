@@ -19,9 +19,14 @@ namespace Inventory
         public MathFunction Function => function;
         public float Value => value;
 
+        public float ExecuteEffect(float effectValue)
+        {
+            return function.ApplyFunction(effectValue, value);
+        }
+        
         public override string ToString()
         {
-            return $"{attribute.ToString()} {function.ToString()} + {value}";
+            return $"{attribute} {function.ToString()} + {value}";
         }
     }
 }

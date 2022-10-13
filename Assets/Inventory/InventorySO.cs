@@ -28,7 +28,7 @@ namespace Inventory
             }
         }
         
-        public void UseItem(ItemSO item, EntitySO target, int count)
+        public void UseItem(ItemSO item, EntityManager target, int count)
         {
             if (!item.Type.Usable) throw new UnusableItemException(item);
             RemoveItem(item, count, out var foundItem);

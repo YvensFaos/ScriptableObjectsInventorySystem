@@ -9,8 +9,10 @@ namespace Entity
     public class EntitySO : NamedScriptableObject
     {
         [SerializeField]
-        private List<AttributePair> attributes;
-
-        public List<AttributePair> Attributes => attributes;
+        private int level;
+        [SerializeField]
+        private List<AttributeCurvePair> attributes;
+        public int Level => level;
+        public List<AttributeCurvePair> Attributes => attributes;
     }
 }

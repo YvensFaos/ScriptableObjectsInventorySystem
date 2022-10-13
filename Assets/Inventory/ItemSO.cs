@@ -19,21 +19,15 @@ namespace Inventory
         [SerializeField] 
         private List<ItemAttributeEffect> effects;
 
-        public virtual void Use(EntitySO target)
+        public virtual void Use(EntityManager target)
         {
-            effects.ForEach(effect =>
-            {
-                var entityAttribute = target.Attributes.Find(attribute => attribute.Two.Equals(effect.Attribute));
-                if (entityAttribute != null)
-                {
-                    entityAttribute.One = effect.Function.ApplyFunction(entityAttribute.One, effect.Value);
-                }
-            });
+            target.UseItem(this);
         }
         
         public ItemTypeSO Type => type;
         public int SellPrice => sellPrice;
         public string Description => description;
         public Sprite Image => image;
+        public List<ItemAttributeEffect> Effects => effects;
     }
 }

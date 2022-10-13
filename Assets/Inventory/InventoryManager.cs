@@ -14,7 +14,7 @@ namespace Inventory
             inventory.AddItem(item, count);
         }
         
-        public void UseItem(ItemSO item, EntitySO target, int count = 1)
+        public void UseItem(ItemSO item, EntityManager target, int count = 1)
         {
             inventory.UseItem(item, target, count);    
         }
