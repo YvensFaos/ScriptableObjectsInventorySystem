@@ -13,6 +13,32 @@ MonoBehaviour:
   m_Name: Player
   m_EditorClassIdentifier: 
   scriptableObjectName: 
+  level: 0
   attributes:
-  - one: 100
+  - one:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 34
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      - serializedVersion: 3
+        time: 1
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 34
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
     two: {fileID: 11400000, guid: 4654f26e6d09e45528d5f21fe8833800, type: 2}
+  equipmentSlots:
+  - {fileID: 11400000, guid: 4c2f5351b298c452c8276eb02c59b221, type: 2}

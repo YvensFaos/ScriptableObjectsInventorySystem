@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 03c66f437eda4f649cc95d648b1e789d, type: 3}
   m_Name: Attack
   m_EditorClassIdentifier: 
-  scriptableObjectName: 
-  overflow: 0
+  scriptableObjectName: Attack
+  overflow: 1

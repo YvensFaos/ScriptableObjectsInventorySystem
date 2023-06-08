@@ -14,4 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   scriptableObjectName: 
   usable: 0
-  equipment: 0
+  equipment: 1
